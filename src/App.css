@@ -1,38 +1,93 @@
-.App {
-  text-align: center;
+* {
+  margin: 0px;
+  padding: 0px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.rps-heading {
+  font-size: 50px;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+}
+
+.choices{
+  display: flex;
+  gap: 30px;
+  position: relative;
+  top: 70px;
+  left: 380px;
+}
+
+#rock{
+  height: 170px;
+  width: 170px;
+  border-radius: 50%;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-image: url(./Components/rock.png);
+  background-size: cover;
+}
+#paper{
+  height: 170px;
+  width: 170px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(./Components/paper.png);
+  background-size: cover;
+}
+#scissor{
+  height: 170px;
+  width: 170px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(./Components/scissors.png);
+  background-size: cover;
 }
 
-.App-link {
-  color: #61dafb;
+#rock:hover{
+  opacity: 0.5;
+  cursor: pointer;
+}
+#paper:hover{
+  opacity: 0.5;
+  cursor: pointer;
+}
+#scissor:hover{
+  opacity: 0.5;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.score-board {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  margin-top: 6rem;
+  gap: 7rem;
+}
+
+.user-score,
+.comp-score {
+  font-size: 3rem;
+  margin-left: 1rem ;
+}
+
+.msg-container {
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.msg {
+  background-color: #081b31;
+  color: #fff;
+  font-size: 1.5rem;
+  display: inline;
+  padding: 1rem;
+  border-radius: 1rem;
 }

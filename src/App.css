@@ -1,73 +1,74 @@
-/* Reset & Base */
-* {
+/* Reset & Global */
+html, body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden; /* ✅ prevent scroll */
   background-color: #f5f7fa;
   font-family: 'Segoe UI', sans-serif;
 }
 
 .container {
-  padding: 2rem;
+  padding: 2rem 1rem;
+  width: 100%;
+  max-width: 100%;
   text-align: center;
 }
 
 /* Heading */
 .rps-heading {
-  font-size: 3.5rem;
+  font-size: 3.2rem;
   margin-bottom: 2rem;
   color: #222;
 }
 
-/* Scoreboard Section */
+/* Scoreboard */
 .score-board {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 4rem;
-  margin-bottom: 2.5rem;
+  gap: 3rem;
+  margin-bottom: 2rem;
   flex-wrap: wrap;
 }
 
 .score {
-  min-width: 140px;
+  min-width: 120px;
 }
 
 .user-score,
 .comp-score {
-  font-size: 3.2rem;
+  font-size: 3rem;
   font-weight: bold;
   color: #081b31;
 }
 
-/* Choice Buttons (Image Style) */
+/* Choices Section */
 .choices {
   display: flex;
   justify-content: center;
-  gap: 3rem;
+  gap: 2rem;
   flex-wrap: wrap;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
 }
 
 .choice-img {
-  width: 180px;
-  height: 180px;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
   cursor: pointer;
   object-fit: cover;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
 }
 
 .choice-img:hover {
   transform: scale(1.1);
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
 }
 
-/* Message Area */
+/* Message Display */
 .msg-container {
   margin-top: 1.5rem;
 }
@@ -75,15 +76,15 @@ body {
 .msg {
   background-color: #081b31;
   color: white;
-  font-size: 1.8rem;
-  padding: 1.2rem 2.5rem;
-  border-radius: 1.2rem;
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
   display: inline-block;
 }
 
 /* Reset Button */
 .reset-container {
-  margin-top: 2.5rem;
+  margin-top: 2rem;
 }
 
 .reset-btn {
@@ -92,7 +93,7 @@ body {
   padding: 1rem 2rem;
   border: none;
   border-radius: 0.7rem;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   cursor: pointer;
   transition: 0.3s;
 }
@@ -108,38 +109,45 @@ body {
     font-size: 2.5rem;
   }
 
-  .choices {
-    gap: 1.5rem;
-  }
-
-  .choice-img {
-    width: 140px;
-    height: 140px;
-  }
-
-  .user-score,
-  .comp-score {
-    font-size: 2.5rem;
-  }
-
-  .msg {
-    font-size: 1.4rem;
-    padding: 1rem 2rem;
-  }
-
-  .reset-btn {
-    font-size: 1.1rem;
-    padding: 0.8rem 1.5rem;
-  }
-}
-
-@media (max-width: 480px) {
   .choice-img {
     width: 120px;
     height: 120px;
   }
 
+  .user-score,
+  .comp-score {
+    font-size: 2.2rem;
+  }
+
   .msg {
     font-size: 1.2rem;
+    padding: 0.8rem 1.2rem;
+  }
+
+  .reset-btn {
+    font-size: 1rem;
+    padding: 0.8rem 1.3rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .choice-img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .msg {
+    font-size: 1rem;
+    padding: 0.6rem 1rem;
+  }
+
+  .user-score,
+  .comp-score {
+    font-size: 2rem;
+  }
+
+  .reset-btn {
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
   }
 }

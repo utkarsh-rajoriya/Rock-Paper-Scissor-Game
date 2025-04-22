@@ -13,8 +13,8 @@
   display: flex;
   gap: 30px;
   position: relative;
-  top: 70px;
-  left: 380px;
+  top: 4rem;
+  left: 35rem;
 }
 
 #rock{

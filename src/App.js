@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "./App.css";
-import rockImg from './Components/rock.png';
-import paperImg from './Components/paper.png';
-import scissorImg from './Components/scissors.png';
+import rockImg from "./Components/rock.png";
+import paperImg from "./Components/paper.png";
+import scissorImg from "./Components/scissors.png";
 
 export default function App() {
   const [userScore, setUserScore] = useState(0);
@@ -42,21 +42,36 @@ export default function App() {
     <div className="container">
       <h1 className="rps-heading">Rock Paper Scissors</h1>
 
-      <div className="row my-2 score-board d-flex justify-content-center">
-        <div className="col-3 score">
+      <div className="score-board">
+        <div className="score text-center">
           <p className="user-score">{userScore}</p>
           <p>You</p>
         </div>
-        <div className="col-3 score">
+        <div className="score text-center">
           <p className="comp-score">{compScore}</p>
           <p>Computer</p>
         </div>
       </div>
 
       <div className="choices">
-      <img src={rockImg} alt="rock" className="choice-img" onClick={() => playRound("rock")} />
-      <img src={paperImg} alt="paper" className="choice-img" onClick={() => playRound("paper")} />
-      <img src={scissorImg} alt="scissor" className="choice-img" onClick={() => playRound("scissor")} />
+        <img
+          src={rockImg}
+          alt="rock"
+          className="choice-img"
+          onClick={() => playRound("rock")}
+        />
+        <img
+          src={paperImg}
+          alt="paper"
+          className="choice-img"
+          onClick={() => playRound("paper")}
+        />
+        <img
+          src={scissorImg}
+          alt="scissor"
+          className="choice-img"
+          onClick={() => playRound("scissor")}
+        />
       </div>
 
       <div className="msg-container">
@@ -64,7 +79,9 @@ export default function App() {
       </div>
 
       <div className="reset-container">
-        <button className="reset-btn" onClick={resetGame}>Reset</button>
+        <button className="reset-btn" onClick={resetGame}>
+          Reset
+        </button>
       </div>
     </div>
   );

@@ -16,61 +16,9 @@ body {
 }
 
 .rps-heading {
-  font-size: 50px;
-  display: flex;
-  justify-content: center;
-}
-
-.choices{
-  display: flex;
-  gap: 30px;
-  position: relative;
-  top: 4rem;
-  left: 35rem;
-}
-
-#rock{
-  height: 170px;
-  width: 170px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-image: url(./Components/rock.png);
-  background-size: cover;
-}
-#paper{
-  height: 170px;
-  width: 170px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-image: url(./Components/paper.png);
-  background-size: cover;
-}
-#scissor{
-  height: 170px;
-  width: 170px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-image: url(./Components/scissors.png);
-  background-size: cover;
-}
-
-#rock:hover{
-  opacity: 0.5;
-  cursor: pointer;
-}
-#paper:hover{
-  opacity: 0.5;
-  cursor: pointer;
-}
-#scissor:hover{
-  opacity: 0.5;
-  cursor: pointer;
+  font-size: 3.5rem;
+  margin-bottom: 2rem;
+  color: #222;
 }
 
 .score-board {

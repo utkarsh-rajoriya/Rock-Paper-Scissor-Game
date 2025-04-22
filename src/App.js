@@ -42,12 +42,12 @@ export default function App() {
     <div className="container">
       <h1 className="rps-heading">Rock Paper Scissors</h1>
 
-      <div className="score-board">
-        <div className="score">
+      <div className="row my-2 score-board d-flex justify-content-center">
+        <div className="col-3 score">
           <p className="user-score">{userScore}</p>
           <p>You</p>
         </div>
-        <div className="score">
+        <div className="col-3 score">
           <p className="comp-score">{compScore}</p>
           <p>Computer</p>
         </div>
